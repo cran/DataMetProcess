@@ -1,13 +1,13 @@
-4d1b8399700232b01e5865a3928e5524 *DESCRIPTION
+0e15f7960ec11be3ac645a272f1723a4 *DESCRIPTION
 acd3f5a75469eb10478fa5fb49995aa1 *NAMESPACE
 f68c833c9f48d27c1d99fc362ff83fd3 *R/adjustDate.R
 0e802ba77b92fb8ec0025426c0eff863 *R/calculateDMY.R
 176a257deada4fdc24ffe4c2e2702521 *R/calculateETrefPM.R
-26975fb141742bfcaa7745b558a2652e *R/list_inmet.R
+4768f5113d421bbf8060d7544c6f27a9 *R/list_inmet.R
 a350831cb995905c5070264f9f163563 *build/vignette.rds
 82d3603e3121dbc7dae20f3d20f31f5b *inst/doc/DataMetProcess-vignette.R
 11f834f58da865ac65a6f9b8f32bf013 *inst/doc/DataMetProcess-vignette.Rmd
-ab9949d066e6f6c9e2be57d025f8ab80 *inst/doc/DataMetProcess-vignette.html
+da4c1289ecd1a25138cb7c76f226cfbd *inst/doc/DataMetProcess-vignette.html
 256c3d5cccbf9ec08cd2e3562915a57e *inst/extdata/ex1_inmet.CSV
 b6fdc15cc5297fea024f9b6b3926a080 *inst/extdata/ex2_daily.CSV
 1084ac58d5a08040efdf6557daab4655 *man/adjustDate.Rd
