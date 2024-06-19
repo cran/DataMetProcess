@@ -54,57 +54,34 @@ adjustDate <- function(
     col_hour = NULL,
     fuso = NULL
 ){
+
+  # Initialize the variable Date_Hour as NULL
   Date_Hour <- NULL
-  #carregando funcao necessarisa
-  col_string <- function(
-    data = NULL,
-    ncol = 1,
-    str = NULL,
-    usestr = FALSE
-  ){
-    if(usestr){
-      base::unlist(data[str],use.names = F)
-    }else{
-      base::unlist(data[base::colnames(data)[ncol]],use.names = F)
-    }
-  }
 
+  # Extract the first two characters (hours) from the col_hour column and overwrite the column in the data frame
+  data[col_hour] <- substr(unlist(data[col_hour], use.names = FALSE), 1, 2)
 
+  # Combine the col_date and col_hour columns into a new column called 'Date_Hour'
+  data <- tidyr::unite(data, 'Date_Hour',
+                       {{col_date}},
+                       {{col_hour}},
+                       remove = TRUE, sep = " ")
 
-  #extraindo somente a hora
-  data <-
-    dplyr::mutate(
-      data,!!rlang::sym(col_hour) :=
-        base::substr(
-          col_string(
-            data = data,
-            usestr = T,
-            str = col_hour
-          ),1,2
-        )
-    )
-
-
-  #correção do fuso
-  data <-
-    tidyr::unite(data,'Date_Hour',
-                 dplyr::any_of(col_date),
-                 dplyr::any_of(col_hour),
-                 remove = T,sep = " ")
-  data <-
-    dplyr::mutate(
-      data,
-      Date_Hour = lubridate::as_datetime(
-        base::format(
-          base::as.POSIXct(
-            base::strptime(Date_Hour, "%Y-%m-%d %H"),
-            usetz = T,
-            tz = "Etc/GMT-0"
-          ),
-          tz = fuso
-        )
+  # Convert the 'Date_Hour' column to the appropriate datetime format
+  data <- dplyr::mutate(
+    data,
+    Date_Hour = lubridate::as_datetime(
+      base::format(
+        base::as.POSIXct(
+          base::strptime(Date_Hour, "%Y-%m-%d %H"),
+          usetz = TRUE,
+          tz = "Etc/GMT-0"
+        ),
+        tz = fuso
       )
     )
+  )
 
+  # Return the modified data frame
   return(data)
 }

@@ -6,60 +6,59 @@
 \usage{
 calculateETrefPM(
   data = NULL,
-  Lat = NULL,
-  Alt = NULL,
-  Alt_an = NULL,
+  lat = NULL,
+  alt = NULL,
+  za = NULL,
   DAP = 1,
-  Date = NULL,
-  Temp = NULL,
+  date = NULL,
+  Ta = NULL,
   G = NULL,
-  Humid = NULL,
-  Rad = NULL,
-  Press = NULL,
-  Wind = NULL,
+  RH = NULL,
+  Rg = NULL,
+  AP = NULL,
+  WS = NULL,
   Kc = NULL
 )
 }
 \arguments{
 \item{data}{Data frame containing the data}
 
-\item{Lat}{Numeric, latitude in decimals}
+\item{lat}{Numeric, latitude in decimals}
 
-\item{Alt}{Numeric, altitude in meters}
+\item{alt}{Numeric, altitude in meters}
 
-\item{Alt_an}{Numeric, anemometer height in meters}
+\item{za}{Numeric, anemometer height in meters}
 
 \item{DAP}{Numeric, days after planting for the first column date}
 
-\item{Date}{String with the column name containing date records (R default date: "\%Y-\%m-\%d")}
+\item{date}{String with the column name containing date records (R default date: "\%Y-\%m-\%d")}
 
-\item{Temp}{String with the column name containing temperature records in °C}
+\item{Ta}{String with the column name containing temperature records in °C}
 
 \item{G}{Optional, if NULL will be considered as zero. String with the column name containing soil heat flux (MJ/m²/day)}
 
-\item{Humid}{String with the column name containing relative humidity records in \%}
+\item{RH}{String with the column name containing relative humidity records in \%}
 
-\item{Rad}{String with the column name containing global radiation records in MJ/m²}
+\item{Rg}{String with the column name containing global radiation records in MJ/m²}
 
-\item{Press}{String with the column name containing atmospheric pressure records in hPa}
+\item{AP}{String with the column name containing atmospheric pressure records in hPa}
 
-\item{Wind}{String with the column name containing wind speed records in m/s}
+\item{WS}{String with the column name containing wind speed records in m/s}
 
 \item{Kc}{Optional, when not NULL the crop evapotranspiration ETc is calculated based on ETref. String with the column name containing crop coefficient (Kc) records}
 }
 \value{
 Data frame with:
-Date;
-ETref - reference evapotranspiration (mm/dia);
-LLI - irrigation level (mm/dia);
-DJ - julian day;
+date;
+etref - reference evapotranspiration (mm/dia);
+dj - julian day;
 DAP - days after planting;
 es - saturation vapor pressure (kPa);
 ea - actual vapor pressure (kPa);
 delta - slope of the saturated water–vapor-pressure curve (kPA/°C);
 y - psychrometric constant (kPA/°C);
-Rn - net radiation (MJ/m²/dia);
-ETc - crop evapotranspiration (mm/dia) (depends on supply of Kc)
+rn - net radiation (MJ/m²/dia);
+etc - crop evapotranspiration (mm/dia) (depends on supply of Kc)
 }
 \description{
 Calculation of daily reference evapotranspiration using the PM method for a dataset stored in a data.frame (Allen et al., 1998).
@@ -69,7 +68,7 @@ The FAO Penman–Monteith method:
 
 \deqn{ETrefPM = \frac{0.408 \Delta(Rn-G) + \gamma \frac{900}{T+273}u_{2}(e_{s}-e_{a})}{\Delta+\gamma(1+0.34u_{2})}}
 
-where: ETref - reference evapotranspiration (mm/dia), delta - slope of the saturated water–vapor-pressure curve (kPA/°C), Rn - net radiation (MJ/m²/dia), G - soil heat flux (MJ/m²/day), y - psychrometric constant (kPA/°C), T - average daily air temperature (°C), u2 -wind speed at 2m height (m/s), es - saturation vapor pressure (kPa), e ea - actual vapor pressure (kPa)
+where: ETref - reference evapotranspiration (mm/dia), delta - slope of the saturated water–vapor-pressure curve (kPA/°C), Rn - net radiation (MJ/m²/dia), G - soil heat flux (MJ/m²/day), y - psychrometric constant (kPA/°C), T - average daily air temperature (°C), u2 - wind speed at 2m height (m/s), es - saturation vapor pressure (kPa), e ea - actual vapor pressure (kPa)
 }
 \examples{
 address <-
@@ -90,17 +89,17 @@ colnames(df)[3] <- "radiacao_global_mj_m"
 df.Eto <-
   calculateETrefPM(
     data = df,
-    Lat = -21.980353,
-    Alt = 859.29,
-    Alt_an = 10,
+    lat = -21.980353,
+    alt = 859.29,
+    za = 10,
     DAP = 1,
-    Date = colnames(df)[1],
-    Temp = colnames(df)[7],
+    date = colnames(df)[1],
+    Ta = colnames(df)[7],
     G = NULL,
-    Humid = colnames(df)[15],
-    Rad = colnames(df)[3],
-    Press = colnames(df)[4],
-    Wind = colnames(df)[18],
+    RH = colnames(df)[15],
+    Rg = colnames(df)[3],
+    AP = colnames(df)[4],
+    WS = colnames(df)[18],
     Kc = NULL
   )
 

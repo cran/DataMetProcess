@@ -9,6 +9,8 @@ calculateDMY(
   col_date = NULL,
   col_sum = NULL,
   col_mean = NULL,
+  col_max = NULL,
+  col_min = NULL,
   n.round = 2,
   type = c("Daily", "Monthly", "Yearly")
 )
@@ -21,6 +23,10 @@ calculateDMY(
 \item{col_sum}{String with the column of data to apply the sum process}
 
 \item{col_mean}{String with the column of data to apply the averaging process}
+
+\item{col_max}{String with data column to find maximum}
+
+\item{col_min}{String with data column to find minimum}
 
 \item{n.round}{Integer, number of decimal places}
 
@@ -63,7 +69,7 @@ df.d <-
 df.m <-
   calculateDMY(
     data = df.d,
-    col_date = "Data",
+    col_date = "Date",
     col_sum = colnames(df.d)[c(2)],
     col_mean = colnames(df.d)[-c(1,2)],
     type = "Monthly"
@@ -72,7 +78,7 @@ df.m <-
 df.a <-
   calculateDMY(
     data = df.m,
-    col_date = "Data",
+    col_date = "Date",
     col_sum = colnames(df.m)[c(2)],
     col_mean = colnames(df.m)[-c(1,2)],
     type = "Yearly"

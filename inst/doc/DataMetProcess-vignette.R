@@ -124,22 +124,22 @@ head(df.yearly[1:2]) #We are only viewing a part of it.
  df$radiacao_global_kj_m <- df$radiacao_global_kj_m/1000
  colnames(df)[3] <- "radiacao_global_mj_m"
 
- df.Eto <-
-   calculateETrefPM(
-     data = df,
-     Lat = -21.980353,
-     Alt = 859.29,
-     Alt_an = 10,
-     DAP = 1,
-     Date = colnames(df)[1],
-     Temp = colnames(df)[7],
-     G = NULL,
-     Humid = colnames(df)[15],
-     Rad = colnames(df)[3],
-     Press = colnames(df)[4],
-     Wind = colnames(df)[18],
-     Kc = NULL
-  )
+df.Eto <-
+ calculateETrefPM(
+   data = df,
+   lat = -21.980353,
+   alt = 859.29,
+   za = 10,
+   DAP = 1,
+   date = colnames(df)[1],
+   Ta = colnames(df)[7],
+   G = NULL,
+   RH = colnames(df)[15],
+   Rg = colnames(df)[3],
+   AP = colnames(df)[4],
+   WS = colnames(df)[18],
+   Kc = NULL
+ )
  
  head(df.Eto)
  

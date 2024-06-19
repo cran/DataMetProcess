@@ -1,7 +1,7 @@
 Package: DataMetProcess
 Type: Package
 Title: Meteorological Data Processing
-Version: 1.0.1
+Version: 1.0.2
 Authors@R: 
     c(
       person("Wagner Martins dos", "Santos",
@@ -18,12 +18,13 @@ Maintainer: Wagner Martins dos Santos <wagnnerms97@gmail.com>
 Description: Set of tools aimed at processing meteorological data, converting hourly recorded data to daily, monthly and annual data.
 License: GPL-3
 Encoding: UTF-8
-RoxygenNote: 7.2.3
-Imports: dplyr, tidyr, lubridate, rlang, utils, base
+URL: https://github.com/wagnnerms97/DataMetProcess
+RoxygenNote: 7.3.1
+Imports: dplyr, tidyr, lubridate, rlang, utils, base, shiny
 Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2024-01-18 12:41:58 UTC; wagne
+Packaged: 2024-06-18 22:24:54 UTC; wagne
 Author: Wagner Martins dos Santos [aut, cre]
     (<https://orcid.org/0000-0002-3584-1323>),
   Edimir Xavier Leal Ferraz [aut]
@@ -31,4 +32,4 @@ Author: Wagner Martins dos Santos [aut, cre]
   Lady Daiane Costa de Sousa Martins [aut]
     (<https://orcid.org/0000-0002-0942-4673>)
 Repository: CRAN
-Date/Publication: 2024-01-18 13:00:02 UTC
+Date/Publication: 2024-06-19 09:50:02 UTC
