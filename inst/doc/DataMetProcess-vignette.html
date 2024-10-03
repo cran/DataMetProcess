@@ -60,7 +60,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
 { counter-reset: source-line 0; }
@@ -373,7 +373,7 @@ doesn’t have much influence at this stage.</p>
 <span id="cb2-24"><a href="#cb2-24" tabindex="-1"></a><span class="co">#&gt; 5 2000  INMET     NE    BA A401          SALVADOR 2000-05-13 2000-12-31</span></span>
 <span id="cb2-25"><a href="#cb2-25" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb2-26"><a href="#cb2-26" tabindex="-1"></a><span class="co">#&gt; $Saved</span></span>
-<span id="cb2-27"><a href="#cb2-27" tabindex="-1"></a><span class="co">#&gt; [1] &quot;C:\\Users\\wagne\\AppData\\Local\\Temp\\RtmpwvaUuS\\file8afc3fcd1249&quot;</span></span></code></pre></div>
+<span id="cb2-27"><a href="#cb2-27" tabindex="-1"></a><span class="co">#&gt; [1] &quot;C:\\Users\\wagne\\AppData\\Local\\Temp\\RtmpE5oGP9\\file5b14244d72ed&quot;</span></span></code></pre></div>
 <p>Now we have an object containing a list of files in
 <code>$Addresses</code> within the path shown in <code>$Saved</code>,
 and a structured table with information extracted from the file
@@ -433,23 +433,23 @@ zones by using <code>OlsonNames()</code>.</p>
 <span id="cb4-24"><a href="#cb4-24" tabindex="-1"></a><span class="co">#&gt; 3 2008-01-01 02:00                            0</span></span>
 <span id="cb4-25"><a href="#cb4-25" tabindex="-1"></a><span class="co">#&gt; 4 2008-01-01 03:00                            0</span></span>
 <span id="cb4-26"><a href="#cb4-26" tabindex="-1"></a><span class="co">#&gt; 5 2008-01-01 04:00                            0</span></span>
-<span id="cb4-27"><a href="#cb4-27" tabindex="-1"></a><span class="co">#&gt; 6 2008-01-01 05:00                            0</span></span></code></pre></div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a></span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>df <span class="ot">&lt;-</span></span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>  <span class="fu">adjustDate</span>(df,</span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>             <span class="fu">colnames</span>(df)[<span class="dv">1</span>],</span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>             <span class="fu">colnames</span>(df)[<span class="dv">2</span>],</span>
-<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>             <span class="at">fuso =</span> <span class="st">&quot;America/Bahia&quot;</span>)</span>
-<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a><span class="co">#date and time are now in a single column</span></span>
-<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="fu">head</span>(df[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]) <span class="co">#We are only viewing a part of it.</span></span>
-<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a><span class="co">#&gt;             Date_Hour precipita_o_total_hor_rio_mm</span></span>
-<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a><span class="co">#&gt; 1 2007-12-31 21:00:00                            0</span></span>
-<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a><span class="co">#&gt; 2 2007-12-31 22:00:00                            0</span></span>
-<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a><span class="co">#&gt; 3 2007-12-31 23:00:00                            0</span></span>
-<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a><span class="co">#&gt; 4 2008-01-01 00:00:00                            0</span></span>
-<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a><span class="co">#&gt; 5 2008-01-01 01:00:00                            0</span></span>
-<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a><span class="co">#&gt; 6 2008-01-01 02:00:00                            0</span></span></code></pre></div>
+<span id="cb4-27"><a href="#cb4-27" tabindex="-1"></a><span class="co">#&gt; 6 2008-01-01 05:00                            0</span></span>
+<span id="cb4-28"><a href="#cb4-28" tabindex="-1"></a></span>
+<span id="cb4-29"><a href="#cb4-29" tabindex="-1"></a>df <span class="ot">&lt;-</span></span>
+<span id="cb4-30"><a href="#cb4-30" tabindex="-1"></a>  <span class="fu">adjustDate</span>(df,</span>
+<span id="cb4-31"><a href="#cb4-31" tabindex="-1"></a>             <span class="fu">colnames</span>(df)[<span class="dv">1</span>],</span>
+<span id="cb4-32"><a href="#cb4-32" tabindex="-1"></a>             <span class="fu">colnames</span>(df)[<span class="dv">2</span>],</span>
+<span id="cb4-33"><a href="#cb4-33" tabindex="-1"></a>             <span class="at">fuso =</span> <span class="st">&quot;America/Bahia&quot;</span>)</span>
+<span id="cb4-34"><a href="#cb4-34" tabindex="-1"></a></span>
+<span id="cb4-35"><a href="#cb4-35" tabindex="-1"></a><span class="co">#date and time are now in a single column</span></span>
+<span id="cb4-36"><a href="#cb4-36" tabindex="-1"></a><span class="fu">head</span>(df[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]) <span class="co">#We are only viewing a part of it.</span></span>
+<span id="cb4-37"><a href="#cb4-37" tabindex="-1"></a><span class="co">#&gt;             Date_Hour precipita_o_total_hor_rio_mm</span></span>
+<span id="cb4-38"><a href="#cb4-38" tabindex="-1"></a><span class="co">#&gt; 1 2007-12-31 21:00:00                            0</span></span>
+<span id="cb4-39"><a href="#cb4-39" tabindex="-1"></a><span class="co">#&gt; 2 2007-12-31 22:00:00                            0</span></span>
+<span id="cb4-40"><a href="#cb4-40" tabindex="-1"></a><span class="co">#&gt; 3 2007-12-31 23:00:00                            0</span></span>
+<span id="cb4-41"><a href="#cb4-41" tabindex="-1"></a><span class="co">#&gt; 4 2008-01-01 00:00:00                            0</span></span>
+<span id="cb4-42"><a href="#cb4-42" tabindex="-1"></a><span class="co">#&gt; 5 2008-01-01 01:00:00                            0</span></span>
+<span id="cb4-43"><a href="#cb4-43" tabindex="-1"></a><span class="co">#&gt; 6 2008-01-01 02:00:00                            0</span></span></code></pre></div>
 </div>
 <div id="calculation-of-daily-monthly-and-annual-scales-with-calculatedmy" class="section level1">
 <h1>Calculation of daily, monthly and annual scales with
@@ -460,71 +460,71 @@ column defined by the previous function to ensure there are no
 differences between the same dates. Then, we populate the parameters
 with the column names in string format (“string”) and define the type as
 <code>&quot;Daily,&quot; &quot;Monthly,&quot; or &quot;Yearly&quot;</code>.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>df.new <span class="ot">&lt;-</span> df</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>df.new<span class="sc">$</span>Date_Hour <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(df<span class="sc">$</span>Date_Hour)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>df.new <span class="ot">&lt;-</span> df</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>df.new<span class="sc">$</span>Date_Hour <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(df<span class="sc">$</span>Date_Hour)</span></code></pre></div>
 <div id="daily" class="section level3">
 <h3>Daily</h3>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>df.daily <span class="ot">&lt;-</span></span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>  <span class="fu">calculateDMY</span>(</span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>    <span class="at">data =</span> df.new,</span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>    <span class="at">col_date =</span> <span class="fu">colnames</span>(df)[<span class="fu">c</span>(<span class="dv">1</span>)],</span>
-<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>    <span class="at">col_sum =</span> <span class="fu">colnames</span>(df)[<span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">6</span>)], <span class="co">#simplest way to pass column names as string</span></span>
-<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>    <span class="at">col_mean =</span> <span class="fu">colnames</span>(df)[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">6</span>)], <span class="co">#remove the previous steps in the parameter above</span></span>
-<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>    <span class="at">type =</span> <span class="st">&quot;Daily&quot;</span></span>
-<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>  )</span>
-<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a></span>
-<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a><span class="fu">head</span>(df.daily[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]) <span class="co">#We are only viewing a part of it.</span></span>
-<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a><span class="co">#&gt; # A tibble: 6 × 2</span></span>
-<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a><span class="co">#&gt;   Date       precipita_o_total_hor_rio_mm</span></span>
-<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a><span class="co">#&gt;   &lt;date&gt;                            &lt;dbl&gt;</span></span>
-<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a><span class="co">#&gt; 1 2007-12-31                          0  </span></span>
-<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a><span class="co">#&gt; 2 2008-01-01                          2.6</span></span>
-<span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a><span class="co">#&gt; 3 2008-01-02                          1.2</span></span>
-<span id="cb7-17"><a href="#cb7-17" tabindex="-1"></a><span class="co">#&gt; 4 2008-01-03                          0  </span></span>
-<span id="cb7-18"><a href="#cb7-18" tabindex="-1"></a><span class="co">#&gt; 5 2008-01-04                          0  </span></span>
-<span id="cb7-19"><a href="#cb7-19" tabindex="-1"></a><span class="co">#&gt; 6 2008-01-05                         14.2</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>df.daily <span class="ot">&lt;-</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>  <span class="fu">calculateDMY</span>(</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>    <span class="at">data =</span> df.new,</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>    <span class="at">col_date =</span> <span class="fu">colnames</span>(df)[<span class="fu">c</span>(<span class="dv">1</span>)],</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>    <span class="at">col_sum =</span> <span class="fu">colnames</span>(df)[<span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">6</span>)], <span class="co">#simplest way to pass column names as string</span></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>    <span class="at">col_mean =</span> <span class="fu">colnames</span>(df)[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">6</span>)], <span class="co">#remove the previous steps in the parameter above</span></span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>    <span class="at">type =</span> <span class="st">&quot;Daily&quot;</span></span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a>  )</span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a><span class="fu">head</span>(df.daily[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]) <span class="co">#We are only viewing a part of it.</span></span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a><span class="co">#&gt; # A tibble: 6 × 2</span></span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a><span class="co">#&gt;   Date       precipita_o_total_hor_rio_mm</span></span>
+<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a><span class="co">#&gt;   &lt;date&gt;                            &lt;dbl&gt;</span></span>
+<span id="cb6-14"><a href="#cb6-14" tabindex="-1"></a><span class="co">#&gt; 1 2007-12-31                          0  </span></span>
+<span id="cb6-15"><a href="#cb6-15" tabindex="-1"></a><span class="co">#&gt; 2 2008-01-01                          2.6</span></span>
+<span id="cb6-16"><a href="#cb6-16" tabindex="-1"></a><span class="co">#&gt; 3 2008-01-02                          1.2</span></span>
+<span id="cb6-17"><a href="#cb6-17" tabindex="-1"></a><span class="co">#&gt; 4 2008-01-03                          0  </span></span>
+<span id="cb6-18"><a href="#cb6-18" tabindex="-1"></a><span class="co">#&gt; 5 2008-01-04                          0  </span></span>
+<span id="cb6-19"><a href="#cb6-19" tabindex="-1"></a><span class="co">#&gt; 6 2008-01-05                         14.2</span></span></code></pre></div>
 </div>
 <div id="monthly" class="section level3">
 <h3>Monthly</h3>
 <p>We use the processed <code>df.daily</code> file from the previous
 topic.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>df.monthly <span class="ot">&lt;-</span></span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>  <span class="fu">calculateDMY</span>(</span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>    <span class="at">data =</span> df.daily,</span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>    <span class="at">col_date =</span> <span class="fu">colnames</span>(df.daily)[<span class="fu">c</span>(<span class="dv">1</span>)],</span>
-<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>    <span class="at">col_sum =</span> <span class="fu">colnames</span>(df.daily)[<span class="fu">c</span>(<span class="dv">2</span>)],</span>
-<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>    <span class="at">col_mean =</span> <span class="fu">colnames</span>(df.daily)[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)],</span>
-<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>    <span class="at">type =</span> <span class="st">&quot;Monthly&quot;</span></span>
-<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a>  )</span>
-<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a></span>
-<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a><span class="fu">head</span>(df.monthly[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]) <span class="co">#We are only viewing a part of it.</span></span>
-<span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a><span class="co">#&gt; # A tibble: 6 × 2</span></span>
-<span id="cb8-12"><a href="#cb8-12" tabindex="-1"></a><span class="co">#&gt;   Date       precipita_o_total_hor_rio_mm</span></span>
-<span id="cb8-13"><a href="#cb8-13" tabindex="-1"></a><span class="co">#&gt;   &lt;date&gt;                            &lt;dbl&gt;</span></span>
-<span id="cb8-14"><a href="#cb8-14" tabindex="-1"></a><span class="co">#&gt; 1 2007-12-01                          0  </span></span>
-<span id="cb8-15"><a href="#cb8-15" tabindex="-1"></a><span class="co">#&gt; 2 2008-01-01                        183. </span></span>
-<span id="cb8-16"><a href="#cb8-16" tabindex="-1"></a><span class="co">#&gt; 3 2008-02-01                        191. </span></span>
-<span id="cb8-17"><a href="#cb8-17" tabindex="-1"></a><span class="co">#&gt; 4 2008-03-01                        174. </span></span>
-<span id="cb8-18"><a href="#cb8-18" tabindex="-1"></a><span class="co">#&gt; 5 2008-04-01                         98.8</span></span>
-<span id="cb8-19"><a href="#cb8-19" tabindex="-1"></a><span class="co">#&gt; 6 2008-05-01                         31.6</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>df.monthly <span class="ot">&lt;-</span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>  <span class="fu">calculateDMY</span>(</span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>    <span class="at">data =</span> df.daily,</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>    <span class="at">col_date =</span> <span class="fu">colnames</span>(df.daily)[<span class="fu">c</span>(<span class="dv">1</span>)],</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>    <span class="at">col_sum =</span> <span class="fu">colnames</span>(df.daily)[<span class="fu">c</span>(<span class="dv">2</span>)],</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>    <span class="at">col_mean =</span> <span class="fu">colnames</span>(df.daily)[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)],</span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>    <span class="at">type =</span> <span class="st">&quot;Monthly&quot;</span></span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>  )</span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a><span class="fu">head</span>(df.monthly[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]) <span class="co">#We are only viewing a part of it.</span></span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a><span class="co">#&gt; # A tibble: 6 × 2</span></span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a><span class="co">#&gt;   Date       precipita_o_total_hor_rio_mm</span></span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a><span class="co">#&gt;   &lt;date&gt;                            &lt;dbl&gt;</span></span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a><span class="co">#&gt; 1 2007-12-01                          0  </span></span>
+<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a><span class="co">#&gt; 2 2008-01-01                        183. </span></span>
+<span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a><span class="co">#&gt; 3 2008-02-01                        191. </span></span>
+<span id="cb7-17"><a href="#cb7-17" tabindex="-1"></a><span class="co">#&gt; 4 2008-03-01                        174. </span></span>
+<span id="cb7-18"><a href="#cb7-18" tabindex="-1"></a><span class="co">#&gt; 5 2008-04-01                         98.8</span></span>
+<span id="cb7-19"><a href="#cb7-19" tabindex="-1"></a><span class="co">#&gt; 6 2008-05-01                         31.6</span></span></code></pre></div>
 </div>
 <div id="yearly" class="section level3">
 <h3>Yearly</h3>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>df.yearly <span class="ot">&lt;-</span></span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>  <span class="fu">calculateDMY</span>(</span>
-<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>    <span class="at">data =</span> df.monthly,</span>
-<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a>    <span class="at">col_date =</span> <span class="fu">colnames</span>(df.monthly)[<span class="fu">c</span>(<span class="dv">1</span>)],</span>
-<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a>    <span class="at">col_sum =</span> <span class="fu">colnames</span>(df.monthly)[<span class="fu">c</span>(<span class="dv">2</span>)],</span>
-<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a>    <span class="at">col_mean =</span> <span class="fu">colnames</span>(df.monthly)[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)],</span>
-<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a>    <span class="at">type =</span> <span class="st">&quot;Yearly&quot;</span></span>
-<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a>  )</span>
-<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a></span>
-<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a><span class="fu">head</span>(df.yearly[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]) <span class="co">#We are only viewing a part of it.</span></span>
-<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a><span class="co">#&gt; # A tibble: 2 × 2</span></span>
-<span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a><span class="co">#&gt;    Date precipita_o_total_hor_rio_mm</span></span>
-<span id="cb9-13"><a href="#cb9-13" tabindex="-1"></a><span class="co">#&gt;   &lt;dbl&gt;                        &lt;dbl&gt;</span></span>
-<span id="cb9-14"><a href="#cb9-14" tabindex="-1"></a><span class="co">#&gt; 1  2007                           0 </span></span>
-<span id="cb9-15"><a href="#cb9-15" tabindex="-1"></a><span class="co">#&gt; 2  2008                        1105.</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>df.yearly <span class="ot">&lt;-</span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>  <span class="fu">calculateDMY</span>(</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>    <span class="at">data =</span> df.monthly,</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>    <span class="at">col_date =</span> <span class="fu">colnames</span>(df.monthly)[<span class="fu">c</span>(<span class="dv">1</span>)],</span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>    <span class="at">col_sum =</span> <span class="fu">colnames</span>(df.monthly)[<span class="fu">c</span>(<span class="dv">2</span>)],</span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>    <span class="at">col_mean =</span> <span class="fu">colnames</span>(df.monthly)[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)],</span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>    <span class="at">type =</span> <span class="st">&quot;Yearly&quot;</span></span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a>  )</span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a><span class="fu">head</span>(df.yearly[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]) <span class="co">#We are only viewing a part of it.</span></span>
+<span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a><span class="co">#&gt; # A tibble: 2 × 2</span></span>
+<span id="cb8-12"><a href="#cb8-12" tabindex="-1"></a><span class="co">#&gt;    Date precipita_o_total_hor_rio_mm</span></span>
+<span id="cb8-13"><a href="#cb8-13" tabindex="-1"></a><span class="co">#&gt;   &lt;dbl&gt;                        &lt;dbl&gt;</span></span>
+<span id="cb8-14"><a href="#cb8-14" tabindex="-1"></a><span class="co">#&gt; 1  2007                           0 </span></span>
+<span id="cb8-15"><a href="#cb8-15" tabindex="-1"></a><span class="co">#&gt; 2  2008                        1105.</span></span></code></pre></div>
 </div>
 </div>
 <div id="reference-evapotranspiration-with-calculateetrefpm" class="section level1">
@@ -538,46 +538,46 @@ the FAO Penman-Monteith method, according to:”</p>
 evapotranspiration – guidelines for computing crop water requirements –
 FAO Irrigation and Drainage Paper 56. FAO, 1998. ISBN 92-5-104219-5</p>
 </blockquote>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a> address <span class="ot">&lt;-</span></span>
-<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>  base<span class="sc">::</span><span class="fu">system.file</span>(<span class="st">&quot;extdata&quot;</span>,</span>
-<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a>                     <span class="st">&quot;ex2_daily.CSV&quot;</span>,</span>
-<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a>                     <span class="at">package =</span> <span class="st">&quot;DataMetProcess&quot;</span>)</span>
-<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a></span>
-<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a> df <span class="ot">&lt;-</span> <span class="fu">read.table</span>(</span>
-<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a> address,</span>
-<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a> <span class="at">h =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a> <span class="at">sep =</span> <span class="st">&quot;;&quot;</span></span>
-<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a> )</span>
-<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a></span>
-<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a> <span class="co">#converting to Mj/m</span></span>
-<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a> df<span class="sc">$</span>radiacao_global_kj_m <span class="ot">&lt;-</span> df<span class="sc">$</span>radiacao_global_kj_m<span class="sc">/</span><span class="dv">1000</span></span>
-<span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a> <span class="fu">colnames</span>(df)[<span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="st">&quot;radiacao_global_mj_m&quot;</span></span>
-<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a></span>
-<span id="cb10-16"><a href="#cb10-16" tabindex="-1"></a>df.Eto <span class="ot">&lt;-</span></span>
-<span id="cb10-17"><a href="#cb10-17" tabindex="-1"></a> <span class="fu">calculateETrefPM</span>(</span>
-<span id="cb10-18"><a href="#cb10-18" tabindex="-1"></a>   <span class="at">data =</span> df,</span>
-<span id="cb10-19"><a href="#cb10-19" tabindex="-1"></a>   <span class="at">lat =</span> <span class="sc">-</span><span class="fl">21.980353</span>,</span>
-<span id="cb10-20"><a href="#cb10-20" tabindex="-1"></a>   <span class="at">alt =</span> <span class="fl">859.29</span>,</span>
-<span id="cb10-21"><a href="#cb10-21" tabindex="-1"></a>   <span class="at">za =</span> <span class="dv">10</span>,</span>
-<span id="cb10-22"><a href="#cb10-22" tabindex="-1"></a>   <span class="at">DAP =</span> <span class="dv">1</span>,</span>
-<span id="cb10-23"><a href="#cb10-23" tabindex="-1"></a>   <span class="at">date =</span> <span class="fu">colnames</span>(df)[<span class="dv">1</span>],</span>
-<span id="cb10-24"><a href="#cb10-24" tabindex="-1"></a>   <span class="at">Ta =</span> <span class="fu">colnames</span>(df)[<span class="dv">7</span>],</span>
-<span id="cb10-25"><a href="#cb10-25" tabindex="-1"></a>   <span class="at">G =</span> <span class="cn">NULL</span>,</span>
-<span id="cb10-26"><a href="#cb10-26" tabindex="-1"></a>   <span class="at">RH =</span> <span class="fu">colnames</span>(df)[<span class="dv">15</span>],</span>
-<span id="cb10-27"><a href="#cb10-27" tabindex="-1"></a>   <span class="at">Rg =</span> <span class="fu">colnames</span>(df)[<span class="dv">3</span>],</span>
-<span id="cb10-28"><a href="#cb10-28" tabindex="-1"></a>   <span class="at">AP =</span> <span class="fu">colnames</span>(df)[<span class="dv">4</span>],</span>
-<span id="cb10-29"><a href="#cb10-29" tabindex="-1"></a>   <span class="at">WS =</span> <span class="fu">colnames</span>(df)[<span class="dv">18</span>],</span>
-<span id="cb10-30"><a href="#cb10-30" tabindex="-1"></a>   <span class="at">Kc =</span> <span class="cn">NULL</span></span>
-<span id="cb10-31"><a href="#cb10-31" tabindex="-1"></a> )</span>
-<span id="cb10-32"><a href="#cb10-32" tabindex="-1"></a> </span>
-<span id="cb10-33"><a href="#cb10-33" tabindex="-1"></a> <span class="fu">head</span>(df.Eto)</span>
-<span id="cb10-34"><a href="#cb10-34" tabindex="-1"></a><span class="co">#&gt;         Data    etref dj DAP       es       ea     delta          y        rn</span></span>
-<span id="cb10-35"><a href="#cb10-35" tabindex="-1"></a><span class="co">#&gt; 1 2008-01-01 8.269305  1   1 3.138558 2.198246 0.1871697 0.06096587 10.534448</span></span>
-<span id="cb10-36"><a href="#cb10-36" tabindex="-1"></a><span class="co">#&gt; 2 2008-01-02 5.987792  2   2 2.877179 2.201042 0.1734963 0.06101973  9.618784</span></span>
-<span id="cb10-37"><a href="#cb10-37" tabindex="-1"></a><span class="co">#&gt; 3 2008-01-03 8.090657  3   3 2.913816 1.998295 0.1754227 0.06113810 10.746086</span></span>
-<span id="cb10-38"><a href="#cb10-38" tabindex="-1"></a><span class="co">#&gt; 4 2008-01-04 9.051521  4   4 2.943771 1.919633 0.1769954 0.06115673 13.339185</span></span>
-<span id="cb10-39"><a href="#cb10-39" tabindex="-1"></a><span class="co">#&gt; 5 2008-01-05 6.495420  5   5 2.842662 2.109539 0.1716782 0.06105032 10.076827</span></span>
-<span id="cb10-40"><a href="#cb10-40" tabindex="-1"></a><span class="co">#&gt; 6 2008-01-06 2.308457  6   6 2.387142 2.131480 0.1473864 0.06096122  8.308235</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a> address <span class="ot">&lt;-</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>  base<span class="sc">::</span><span class="fu">system.file</span>(<span class="st">&quot;extdata&quot;</span>,</span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>                     <span class="st">&quot;ex2_daily.CSV&quot;</span>,</span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a>                     <span class="at">package =</span> <span class="st">&quot;DataMetProcess&quot;</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a> df <span class="ot">&lt;-</span> <span class="fu">read.table</span>(</span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a> address,</span>
+<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a> <span class="at">h =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a> <span class="at">sep =</span> <span class="st">&quot;;&quot;</span></span>
+<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a> )</span>
+<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a> <span class="co">#converting to Mj/m</span></span>
+<span id="cb9-13"><a href="#cb9-13" tabindex="-1"></a> df<span class="sc">$</span>radiacao_global_kj_m <span class="ot">&lt;-</span> df<span class="sc">$</span>radiacao_global_kj_m<span class="sc">/</span><span class="dv">1000</span></span>
+<span id="cb9-14"><a href="#cb9-14" tabindex="-1"></a> <span class="fu">colnames</span>(df)[<span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="st">&quot;radiacao_global_mj_m&quot;</span></span>
+<span id="cb9-15"><a href="#cb9-15" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" tabindex="-1"></a>df.Eto <span class="ot">&lt;-</span></span>
+<span id="cb9-17"><a href="#cb9-17" tabindex="-1"></a> <span class="fu">calculateETrefPM</span>(</span>
+<span id="cb9-18"><a href="#cb9-18" tabindex="-1"></a>   <span class="at">data =</span> df,</span>
+<span id="cb9-19"><a href="#cb9-19" tabindex="-1"></a>   <span class="at">lat =</span> <span class="sc">-</span><span class="fl">21.980353</span>,</span>
+<span id="cb9-20"><a href="#cb9-20" tabindex="-1"></a>   <span class="at">alt =</span> <span class="fl">859.29</span>,</span>
+<span id="cb9-21"><a href="#cb9-21" tabindex="-1"></a>   <span class="at">za =</span> <span class="dv">10</span>,</span>
+<span id="cb9-22"><a href="#cb9-22" tabindex="-1"></a>   <span class="at">DAP =</span> <span class="dv">1</span>,</span>
+<span id="cb9-23"><a href="#cb9-23" tabindex="-1"></a>   <span class="at">date =</span> <span class="fu">colnames</span>(df)[<span class="dv">1</span>],</span>
+<span id="cb9-24"><a href="#cb9-24" tabindex="-1"></a>   <span class="at">Ta =</span> <span class="fu">colnames</span>(df)[<span class="dv">7</span>],</span>
+<span id="cb9-25"><a href="#cb9-25" tabindex="-1"></a>   <span class="at">G =</span> <span class="cn">NULL</span>,</span>
+<span id="cb9-26"><a href="#cb9-26" tabindex="-1"></a>   <span class="at">RH =</span> <span class="fu">colnames</span>(df)[<span class="dv">15</span>],</span>
+<span id="cb9-27"><a href="#cb9-27" tabindex="-1"></a>   <span class="at">Rg =</span> <span class="fu">colnames</span>(df)[<span class="dv">3</span>],</span>
+<span id="cb9-28"><a href="#cb9-28" tabindex="-1"></a>   <span class="at">AP =</span> <span class="fu">colnames</span>(df)[<span class="dv">4</span>],</span>
+<span id="cb9-29"><a href="#cb9-29" tabindex="-1"></a>   <span class="at">WS =</span> <span class="fu">colnames</span>(df)[<span class="dv">18</span>],</span>
+<span id="cb9-30"><a href="#cb9-30" tabindex="-1"></a>   <span class="at">Kc =</span> <span class="cn">NULL</span></span>
+<span id="cb9-31"><a href="#cb9-31" tabindex="-1"></a> )</span>
+<span id="cb9-32"><a href="#cb9-32" tabindex="-1"></a> </span>
+<span id="cb9-33"><a href="#cb9-33" tabindex="-1"></a> <span class="fu">head</span>(df.Eto)</span>
+<span id="cb9-34"><a href="#cb9-34" tabindex="-1"></a><span class="co">#&gt;         Data    etref dj DAP       es       ea     delta          y        rn</span></span>
+<span id="cb9-35"><a href="#cb9-35" tabindex="-1"></a><span class="co">#&gt; 1 2008-01-01 8.269305  1   1 3.138558 2.198246 0.1871697 0.06096587 10.534448</span></span>
+<span id="cb9-36"><a href="#cb9-36" tabindex="-1"></a><span class="co">#&gt; 2 2008-01-02 5.987792  2   2 2.877179 2.201042 0.1734963 0.06101973  9.618784</span></span>
+<span id="cb9-37"><a href="#cb9-37" tabindex="-1"></a><span class="co">#&gt; 3 2008-01-03 8.090657  3   3 2.913816 1.998295 0.1754227 0.06113810 10.746086</span></span>
+<span id="cb9-38"><a href="#cb9-38" tabindex="-1"></a><span class="co">#&gt; 4 2008-01-04 9.051521  4   4 2.943771 1.919633 0.1769954 0.06115673 13.339185</span></span>
+<span id="cb9-39"><a href="#cb9-39" tabindex="-1"></a><span class="co">#&gt; 5 2008-01-05 6.495420  5   5 2.842662 2.109539 0.1716782 0.06105032 10.076827</span></span>
+<span id="cb9-40"><a href="#cb9-40" tabindex="-1"></a><span class="co">#&gt; 6 2008-01-06 2.308457  6   6 2.387142 2.131480 0.1473864 0.06096122  8.308235</span></span></code></pre></div>
 </div>
 
 

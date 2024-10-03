@@ -1,11 +1,11 @@
-5565ebb349690a224ca1647aeebc442d *DESCRIPTION
+d32446d23ecf9cbc8a5eec12745ba290 *DESCRIPTION
 cfa618731ade3d89c0e3002a47836076 *NAMESPACE
 42534e522f648f7f1e71e6ad9e9b2973 *R/DMPshiny.R
 3bb305161a0e1c502a352f5e15a9d711 *R/adjustDate.R
-962b5bec6aba93f3588e918d7a9e6adf *R/calculateDMY.R
+2530cb2e9184f5c2807e266deae6185e *R/calculateDMY.R
 670113612d7190e6fc9c4897d31efe37 *R/calculateETrefPM.R
 2693be03ed88447a8f58e902c2b53bd4 *R/list_inmet.R
-8535973db6e41a3f726095a6661d8077 *build/vignette.rds
+1b513b84a117e36ae7ef491ef51dfb49 *build/vignette.rds
 e0ee4056cb7a3e0b08d549ef4c8bedad *inst/DataMetProcess_Shiny/app.R
 7874a6284db1c44cea20acf2444e50c2 *inst/DataMetProcess_Shiny/functions/JS.R
 be69a5ed4ba015edb4424ebe7594a8e0 *inst/DataMetProcess_Shiny/functions/Load_All.R
@@ -29,7 +29,7 @@ a64581f12231051ab5a446c6748c1ff4 *inst/DataMetProcess_Shiny/materials/logoback.p
 5ce8e4bdab2f868ed9ed6c53b99d8aa0 *inst/DataMetProcess_Shiny/partitions/server_partitions/serverCharts.R
 225a3f5ea5b0d9e44d575db64063fe4a *inst/DataMetProcess_Shiny/partitions/server_partitions/serverDownInmet.R
 8cce51105916bb210f09b7e98d88e9b7 *inst/DataMetProcess_Shiny/partitions/server_partitions/serverEvapo.R
-31ffba6531a45bb653c761645be31511 *inst/DataMetProcess_Shiny/partitions/server_partitions/serverProcess.R
+231a237405b862d851cdca3ff78a15e9 *inst/DataMetProcess_Shiny/partitions/server_partitions/serverProcess.R
 aa37394d67f001c8e844ff73d19a1179 *inst/DataMetProcess_Shiny/partitions/server_partitions/serverUpETo.R
 1b34b4cf7c0b2458a00b18f4da6128f9 *inst/DataMetProcess_Shiny/partitions/server_partitions/serverUpload.R
 88c39cc03948edac95d1f3de4da1752b *inst/DataMetProcess_Shiny/partitions/ui_partitions/panels/pan_chart.R
@@ -41,9 +41,10 @@ e319bd50764759736461f30771557272 *inst/DataMetProcess_Shiny/partitions/ui_partit
 4d11431a039f9ec728f1f47d3c95bc13 *inst/DataMetProcess_Shiny/partitions/ui_partitions/ui_eto.R
 a06e56f776355db4d7b4df03513800d4 *inst/DataMetProcess_Shiny/partitions/ui_partitions/ui_load_file.R
 246d4e2dec57426c658deb7bb276c424 *inst/DataMetProcess_Shiny/partitions/ui_partitions/ui_proc.R
+1696ccbd7a00e5f4b634f908eda2e4a2 *inst/DataMetProcess_Shiny/rsconnect/shinyapps.io/wagnnermds/datametprocess_shiny.dcf
 9287c933cbf54a72a761d87713a2ff8a *inst/doc/DataMetProcess-vignette.R
 c1bdb5761d67f898cd825f23bb503d7e *inst/doc/DataMetProcess-vignette.Rmd
-679065e3d7a5849cc7084dde84cc8f41 *inst/doc/DataMetProcess-vignette.html
+086ebfea00d02339e81e42f9de7f85b2 *inst/doc/DataMetProcess-vignette.html
 3d86f69ffa4853f4ce49a1140a685ce4 *inst/extdata/2019_INMET_CO_DF_A001_BRASILIA_01-01-2019_A_31-12-2019.CSV
 8b3b998722bec1adf6c0b9684e8914ed *inst/extdata/TesteETC.csv
 256c3d5cccbf9ec08cd2e3562915a57e *inst/extdata/ex1_inmet.CSV

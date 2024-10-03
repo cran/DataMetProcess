@@ -1,0 +1,10 @@
+name: datametprocess_shiny
+title:
+username: wagnnermds
+account: wagnnermds
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12201730
+bundleId: 8763927
+url: https://wagnnermds.shinyapps.io/datametprocess_shiny/
+version: 1
