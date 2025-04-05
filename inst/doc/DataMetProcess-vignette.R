@@ -18,22 +18,22 @@ info.inmet <- DataMetProcess::list_inmet(
 head(info.inmet)
 
 ## ----eval=FALSE---------------------------------------------------------------
-#  
-#  file.save <- tempfile()
-#  
-#  unzip.file <-
-#     utils::unzip(
-#       zipfile = file.down, #or info.inmet$Saved
-#       exdir = file.save
-#     )
-#  
-#  #specific file
-#  unzip.file <-
-#     utils::unzip(
-#       zipfile = file.down, #or info.inmet$Saved
-#       files = info.inmet$Adresses[2,],
-#       exdir = file.save
-#     )
+# 
+# file.save <- tempfile()
+# 
+# unzip.file <-
+#    utils::unzip(
+#      zipfile = file.down, #or info.inmet$Saved
+#      exdir = file.save
+#    )
+# 
+# #specific file
+# unzip.file <-
+#    utils::unzip(
+#      zipfile = file.down, #or info.inmet$Saved
+#      files = info.inmet$Adresses[2,],
+#      exdir = file.save
+#    )
 
 ## -----------------------------------------------------------------------------
 address <-
