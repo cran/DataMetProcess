@@ -1,4 +1,4 @@
-0b851934e140360930bf5ddbcb6d4e75 *DESCRIPTION
+00bd438ce654721b68c2196e0e141244 *DESCRIPTION
 b5c59a629deb0a8071a6ec42b04efb3c *NAMESPACE
 42534e522f648f7f1e71e6ad9e9b2973 *R/DMPshiny.R
 3bb305161a0e1c502a352f5e15a9d711 *R/adjustDate.R
@@ -6,7 +6,8 @@ b5c59a629deb0a8071a6ec42b04efb3c *NAMESPACE
 081c1bc683b78be3c916174883f12307 *R/calculateETrefPM.R
 2693be03ed88447a8f58e902c2b53bd4 *R/list_inmet.R
 09cfb0562345a56822b09045d2824bcd *build/vignette.rds
-e0ee4056cb7a3e0b08d549ef4c8bedad *inst/DataMetProcess_Shiny/App.R
+8fb0998f4b80a756c06d51a15902d3e2 *inst/CITATION
+862dcdbcb899e7bd0e53b20dcb0a93b4 *inst/DataMetProcess_Shiny/App.R
 7874a6284db1c44cea20acf2444e50c2 *inst/DataMetProcess_Shiny/functions/JS.R
 be69a5ed4ba015edb4424ebe7594a8e0 *inst/DataMetProcess_Shiny/functions/Load_All.R
 b5fcad7f9b33898e93c4a776a26d773a *inst/DataMetProcess_Shiny/functions/charts.R
@@ -23,7 +24,8 @@ f2a927057f3c7c9c541db03e975ccf78 *inst/DataMetProcess_Shiny/materials/PGEA.png
 adbc57cd9f4ea4c4ef371e318014fecb *inst/DataMetProcess_Shiny/materials/UAST2.png
 9c645ed642235c1621f0cf175e2b8f01 *inst/DataMetProcess_Shiny/materials/UFRPE.png
 824b85b600bf89894fe134659d2141ee *inst/DataMetProcess_Shiny/materials/UFRPE2.png
-73d7fc0bd4a69263854e865761a1e4da *inst/DataMetProcess_Shiny/materials/load_materials.R
+ce0a59ae080e8d7498cf42a22316c008 *inst/DataMetProcess_Shiny/materials/gas.png
+c552356f04bdd8681af21d632f1fff39 *inst/DataMetProcess_Shiny/materials/load_materials.R
 a64581f12231051ab5a446c6748c1ff4 *inst/DataMetProcess_Shiny/materials/logoback.png
 0fb89d8f806cdba6bfbb51cc84c77fa0 *inst/DataMetProcess_Shiny/materials/styles.css
 5ce8e4bdab2f868ed9ed6c53b99d8aa0 *inst/DataMetProcess_Shiny/partitions/server_partitions/serverCharts.R
@@ -36,14 +38,14 @@ aa37394d67f001c8e844ff73d19a1179 *inst/DataMetProcess_Shiny/partitions/server_pa
 96d0ee44dbecd724ce9ce32f8e2177d6 *inst/DataMetProcess_Shiny/partitions/ui_partitions/panels/pan_eto.R
 9ce2fdf822e4e40982aa4567c8405247 *inst/DataMetProcess_Shiny/partitions/ui_partitions/panels/pan_load_file.R
 0c600eb77789c963602efa06a9114d34 *inst/DataMetProcess_Shiny/partitions/ui_partitions/panels/pan_process.R
-aebfcadd4bbb1402ad2598eceead286a *inst/DataMetProcess_Shiny/partitions/ui_partitions/ui_about.R
+2eeca100a4749d7e8b1e7314055ec203 *inst/DataMetProcess_Shiny/partitions/ui_partitions/ui_about.R
 e319bd50764759736461f30771557272 *inst/DataMetProcess_Shiny/partitions/ui_partitions/ui_down_inmet.R
 4d11431a039f9ec728f1f47d3c95bc13 *inst/DataMetProcess_Shiny/partitions/ui_partitions/ui_eto.R
 a06e56f776355db4d7b4df03513800d4 *inst/DataMetProcess_Shiny/partitions/ui_partitions/ui_load_file.R
 246d4e2dec57426c658deb7bb276c424 *inst/DataMetProcess_Shiny/partitions/ui_partitions/ui_proc.R
 551f0ee1ee6cffe557993883e2788658 *inst/doc/DataMetProcess-vignette.R
 c1bdb5761d67f898cd825f23bb503d7e *inst/doc/DataMetProcess-vignette.Rmd
-eb26af13121db00a05596323e446e6f3 *inst/doc/DataMetProcess-vignette.html
+9399dd6a6bf6081469d1e20a51e9f0af *inst/doc/DataMetProcess-vignette.html
 98860152959359c39915dd8ad6491701 *inst/extdata/2019_INMET_CO_DF_A001_BRASILIA_01-01-2019_A_31-12-2019.CSV
 8b3b998722bec1adf6c0b9684e8914ed *inst/extdata/TesteETC.csv
 256c3d5cccbf9ec08cd2e3562915a57e *inst/extdata/ex1_inmet.CSV
