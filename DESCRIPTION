@@ -1,7 +1,7 @@
 Package: DataMetProcess
 Type: Package
 Title: Meteorological Data Processing
-Version: 1.0.5
+Version: 1.0.6
 Authors@R: 
     c(
       person("Wagner Martins dos", "Santos",
@@ -27,7 +27,7 @@ Authors@R:
               comment = ""),
       person("Thieres George Freire", "da Silva",
               email = "", role = "aut",
-              comment = ""),
+              comment = c(ORCID = "0000-0002-8355-4935")),
       person("João L.M.P.", "de Lima",
               email = "", role = "aut",
               comment = ""),
@@ -36,7 +36,7 @@ Authors@R:
               comment = ""),
       person("Alexandre Maniçoba da Rosa Ferraz", "Jardim",
               email = "", role = "aut",
-              comment = "")
+              comment = c(ORCID = "0000-0001-7094-3635"))
     )
 Maintainer: Wagner Martins dos Santos <wagnnerms97@gmail.com>
 Description: Set of tools aimed at processing meteorological data, converting hourly recorded data to daily, monthly and annual data.
@@ -50,7 +50,7 @@ Imports: dplyr, tidyr, lubridate, rlang, utils, base, shiny
 Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2025-05-12 19:14:15 UTC; wagne
+Packaged: 2025-08-23 13:34:23 UTC; wagne
 Author: Wagner Martins dos Santos [aut, cre] (ORCID:
     <https://orcid.org/0000-0002-3584-1323>),
   Hoi Leong Lee [aut],
@@ -61,9 +61,11 @@ Author: Wagner Martins dos Santos [aut, cre] (ORCID:
     <https://orcid.org/0000-0002-0942-4673>),
   Alan Cézar Bezerra [aut],
   Ênio Farias de França e Silva [aut],
-  Thieres George Freire da Silva [aut],
+  Thieres George Freire da Silva [aut] (ORCID:
+    <https://orcid.org/0000-0002-8355-4935>),
   João L.M.P. de Lima [aut],
   Xuguang Tang [aut],
-  Alexandre Maniçoba da Rosa Ferraz Jardim [aut]
+  Alexandre Maniçoba da Rosa Ferraz Jardim [aut] (ORCID:
+    <https://orcid.org/0000-0001-7094-3635>)
 Repository: CRAN
-Date/Publication: 2025-05-12 19:50:07 UTC
+Date/Publication: 2025-08-23 13:50:02 UTC

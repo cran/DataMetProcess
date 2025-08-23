@@ -1,10 +1,10 @@
-00bd438ce654721b68c2196e0e141244 *DESCRIPTION
+66d7e7906d6fa8f17019a45049b80f2a *DESCRIPTION
 b5c59a629deb0a8071a6ec42b04efb3c *NAMESPACE
 42534e522f648f7f1e71e6ad9e9b2973 *R/DMPshiny.R
-3bb305161a0e1c502a352f5e15a9d711 *R/adjustDate.R
+3966581b7c473453813be5dacc269908 *R/adjustDate.R
 2530cb2e9184f5c2807e266deae6185e *R/calculateDMY.R
 081c1bc683b78be3c916174883f12307 *R/calculateETrefPM.R
-2693be03ed88447a8f58e902c2b53bd4 *R/list_inmet.R
+3801d631b5e82f98ecc7c113f0ccc846 *R/list_inmet.R
 09cfb0562345a56822b09045d2824bcd *build/vignette.rds
 8fb0998f4b80a756c06d51a15902d3e2 *inst/CITATION
 862dcdbcb899e7bd0e53b20dcb0a93b4 *inst/DataMetProcess_Shiny/App.R
@@ -45,7 +45,7 @@ a06e56f776355db4d7b4df03513800d4 *inst/DataMetProcess_Shiny/partitions/ui_partit
 246d4e2dec57426c658deb7bb276c424 *inst/DataMetProcess_Shiny/partitions/ui_partitions/ui_proc.R
 551f0ee1ee6cffe557993883e2788658 *inst/doc/DataMetProcess-vignette.R
 c1bdb5761d67f898cd825f23bb503d7e *inst/doc/DataMetProcess-vignette.Rmd
-9399dd6a6bf6081469d1e20a51e9f0af *inst/doc/DataMetProcess-vignette.html
+28e35f7c65099a5708e9b4e8554a9e39 *inst/doc/DataMetProcess-vignette.html
 98860152959359c39915dd8ad6491701 *inst/extdata/2019_INMET_CO_DF_A001_BRASILIA_01-01-2019_A_31-12-2019.CSV
 8b3b998722bec1adf6c0b9684e8914ed *inst/extdata/TesteETC.csv
 256c3d5cccbf9ec08cd2e3562915a57e *inst/extdata/ex1_inmet.CSV
