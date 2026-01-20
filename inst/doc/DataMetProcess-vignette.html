@@ -354,27 +354,18 @@ doesn’t have much influence at this stage.</p>
 <span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>  <span class="at">year=</span><span class="st">&quot;2000&quot;</span>,</span>
 <span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>  <span class="at">filename =</span> file.down</span>
 <span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a>)</span>
-<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="fu">head</span>(info.inmet)</span>
-<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a><span class="co">#&gt; $Adresses</span></span>
-<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="co">#&gt;                                                                  Name</span></span>
-<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="co">#&gt; 1                                                               2000/</span></span>
-<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a><span class="co">#&gt; 2          2000/INMET_CO_DF_A001_BRASILIA_07-05-2000_A_31-12-2000.CSV</span></span>
-<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a><span class="co">#&gt; 3          2000/INMET_NE_BA_A401_SALVADOR_13-05-2000_A_31-12-2000.CSV</span></span>
-<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a><span class="co">#&gt; 4             2000/INMET_N_AM_A101_MANAUS_09-05-2000_A_31-12-2000.CSV</span></span>
-<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a><span class="co">#&gt; 5 2000/INMET_SE_RJ_A601_ECOLOGIA AGRICOLA_07-05-2000_A_31-12-2000.CSV</span></span>
-<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a><span class="co">#&gt; 6       2000/INMET_S_RS_A801_PORTO ALEGRE_22-09-2000_A_31-12-2000.CSV</span></span>
-<span id="cb2-17"><a href="#cb2-17" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb2-18"><a href="#cb2-18" tabindex="-1"></a><span class="co">#&gt; $Details</span></span>
-<span id="cb2-19"><a href="#cb2-19" tabindex="-1"></a><span class="co">#&gt;   Year Origin Region State   Id              City Start.Date   End.Date</span></span>
-<span id="cb2-20"><a href="#cb2-20" tabindex="-1"></a><span class="co">#&gt; 1 2000  INMET     CO    DF A001          BRASILIA 2000-05-07 2000-12-31</span></span>
-<span id="cb2-21"><a href="#cb2-21" tabindex="-1"></a><span class="co">#&gt; 2 2000  INMET     SE    RJ A601 ECOLOGIA AGRICOLA 2000-05-07 2000-12-31</span></span>
-<span id="cb2-22"><a href="#cb2-22" tabindex="-1"></a><span class="co">#&gt; 3 2000  INMET      N    AM A101            MANAUS 2000-05-09 2000-12-31</span></span>
-<span id="cb2-23"><a href="#cb2-23" tabindex="-1"></a><span class="co">#&gt; 4 2000  INMET      S    RS A801      PORTO ALEGRE 2000-09-22 2000-12-31</span></span>
-<span id="cb2-24"><a href="#cb2-24" tabindex="-1"></a><span class="co">#&gt; 5 2000  INMET     NE    BA A401          SALVADOR 2000-05-13 2000-12-31</span></span>
-<span id="cb2-25"><a href="#cb2-25" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb2-26"><a href="#cb2-26" tabindex="-1"></a><span class="co">#&gt; $Saved</span></span>
-<span id="cb2-27"><a href="#cb2-27" tabindex="-1"></a><span class="co">#&gt; [1] &quot;C:\\Users\\wagne\\AppData\\Local\\Temp\\RtmpEvfKVj\\file47781fe8a2a&quot;</span></span></code></pre></div>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="co">#&gt; Warning in utils::download.file(url =</span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="co">#&gt; base::paste0(&quot;https://portal.inmet.gov.br/uploads/dadoshistoricos/&quot;, : cannot</span></span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a><span class="co">#&gt; open URL &#39;https://portal.inmet.gov.br/uploads/dadoshistoricos/2000.zip&#39;: HTTP</span></span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="co">#&gt; status was &#39;403 Forbidden&#39;</span></span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="co">#&gt; Data for year 2000 is currently unavailable.</span></span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a><span class="co">#&gt; Possible reasons: no internet connection, server down, or URL changed.</span></span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a><span class="co">#&gt; Please check your connection and try again later.Suggested solution: increase the maximum download time, e.g.:</span></span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a><span class="co">#&gt; options(timeout = 1000)</span></span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a><span class="co">#&gt; Download failed or file is empty.</span></span>
+<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" tabindex="-1"></a><span class="fu">head</span>(info.inmet)</span>
+<span id="cb2-18"><a href="#cb2-18" tabindex="-1"></a><span class="co">#&gt; NULL</span></span></code></pre></div>
 <p>Now we have an object containing a list of files in
 <code>$Addresses</code> within the path shown in <code>$Saved</code>,
 and a structured table with information extracted from the file
@@ -572,13 +563,20 @@ FAO Irrigation and Drainage Paper 56. FAO, 1998. ISBN 92-5-104219-5</p>
 <span id="cb9-31"><a href="#cb9-31" tabindex="-1"></a> )</span>
 <span id="cb9-32"><a href="#cb9-32" tabindex="-1"></a> </span>
 <span id="cb9-33"><a href="#cb9-33" tabindex="-1"></a> <span class="fu">head</span>(df.Eto)</span>
-<span id="cb9-34"><a href="#cb9-34" tabindex="-1"></a><span class="co">#&gt;         Data    etref JD DAP       es       ea     delta          y        rn</span></span>
-<span id="cb9-35"><a href="#cb9-35" tabindex="-1"></a><span class="co">#&gt; 1 2008-01-01 8.269305  1   1 3.138558 2.198246 0.1871697 0.06096587 10.534448</span></span>
-<span id="cb9-36"><a href="#cb9-36" tabindex="-1"></a><span class="co">#&gt; 2 2008-01-02 5.987792  2   2 2.877179 2.201042 0.1734963 0.06101973  9.618784</span></span>
-<span id="cb9-37"><a href="#cb9-37" tabindex="-1"></a><span class="co">#&gt; 3 2008-01-03 8.090657  3   3 2.913816 1.998295 0.1754227 0.06113810 10.746086</span></span>
-<span id="cb9-38"><a href="#cb9-38" tabindex="-1"></a><span class="co">#&gt; 4 2008-01-04 9.051521  4   4 2.943771 1.919633 0.1769954 0.06115673 13.339185</span></span>
-<span id="cb9-39"><a href="#cb9-39" tabindex="-1"></a><span class="co">#&gt; 5 2008-01-05 6.495420  5   5 2.842662 2.109539 0.1716782 0.06105032 10.076827</span></span>
-<span id="cb9-40"><a href="#cb9-40" tabindex="-1"></a><span class="co">#&gt; 6 2008-01-06 2.308457  6   6 2.387142 2.131480 0.1473864 0.06096122  8.308235</span></span></code></pre></div>
+<span id="cb9-34"><a href="#cb9-34" tabindex="-1"></a><span class="co">#&gt;         Date       es       ea     Delta      gamma        Rn        u2</span></span>
+<span id="cb9-35"><a href="#cb9-35" tabindex="-1"></a><span class="co">#&gt; 1 2008-01-01 3.137713 2.197654 0.1871193 0.06096587 10.534126 1.3163939</span></span>
+<span id="cb9-36"><a href="#cb9-36" tabindex="-1"></a><span class="co">#&gt; 2 2008-01-02 2.876395 2.200442 0.1734490 0.06101973  9.618539 1.4959022</span></span>
+<span id="cb9-37"><a href="#cb9-37" tabindex="-1"></a><span class="co">#&gt; 3 2008-01-03 2.913023 1.997751 0.1753750 0.06113810 10.745757 1.9072752</span></span>
+<span id="cb9-38"><a href="#cb9-38" tabindex="-1"></a><span class="co">#&gt; 4 2008-01-04 2.942971 1.919112 0.1769474 0.06115673 13.338659 1.6604514</span></span>
+<span id="cb9-39"><a href="#cb9-39" tabindex="-1"></a><span class="co">#&gt; 5 2008-01-05 2.841886 2.108964 0.1716313 0.06105032 10.076548 1.5033817</span></span>
+<span id="cb9-40"><a href="#cb9-40" tabindex="-1"></a><span class="co">#&gt; 6 2008-01-06 2.386476 2.130885 0.1473453 0.06096122  8.308098 0.9947749</span></span>
+<span id="cb9-41"><a href="#cb9-41" tabindex="-1"></a><span class="co">#&gt;        ET0</span></span>
+<span id="cb9-42"><a href="#cb9-42" tabindex="-1"></a><span class="co">#&gt; 1 3.748383</span></span>
+<span id="cb9-43"><a href="#cb9-43" tabindex="-1"></a><span class="co">#&gt; 2 3.269383</span></span>
+<span id="cb9-44"><a href="#cb9-44" tabindex="-1"></a><span class="co">#&gt; 3 3.956928</span></span>
+<span id="cb9-45"><a href="#cb9-45" tabindex="-1"></a><span class="co">#&gt; 4 4.688711</span></span>
+<span id="cb9-46"><a href="#cb9-46" tabindex="-1"></a><span class="co">#&gt; 5 3.448512</span></span>
+<span id="cb9-47"><a href="#cb9-47" tabindex="-1"></a><span class="co">#&gt; 6 2.389488</span></span></code></pre></div>
 </div>
 
 
